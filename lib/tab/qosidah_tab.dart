@@ -25,7 +25,7 @@ class _QosidahTabState extends State<QosidahTab> {
   Future<void> _loadJsonData() async {
     // Membaca file JSON dari assets
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/datas/dataqosidah.json');
+        .loadString('assets/datas/data_qosidah.json');
 
     // Mendekode JSON menjadi List<dynamic>
     List<dynamic> decodedData = json.decode(data);

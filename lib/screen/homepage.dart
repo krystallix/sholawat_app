@@ -39,9 +39,9 @@ class _HomePageState extends State<HomePage>
     mergedData.clear();
 
     List<String> filenames = [
-      'dataqosidah.json',
-      'datasuluk.json',
-      'datamaulid.json'
+      'dataqo_sidah.json',
+      'data_suluk.json',
+      'data_maulid.json'
     ];
 
     // Loop untuk memuat dan menguraikan tiga file JSON
@@ -65,8 +65,8 @@ class _HomePageState extends State<HomePage>
   _loadLastReadData() async {
     final formattedTitle = lastReadTitle.toLowerCase().replaceAll(' ', '_');
     try {
-      String jsonString =
-          await rootBundle.loadString('assets/datas/$formattedTitle.json');
+      String jsonString = await rootBundle
+          .loadString('assets/datas/lirik/$formattedTitle.json');
       setState(() {
         lastReadData = jsonDecode(jsonString);
         arabicText = lastReadData['arabicText'] ?? '';
@@ -86,7 +86,8 @@ class _HomePageState extends State<HomePage>
   }
 
   Future<List<Map<String, dynamic>>> _loadJsonData(String filename) async {
-    String jsonString = await rootBundle.loadString('assets/datas/$filename');
+    String jsonString =
+        await rootBundle.loadString('assets/datas/lirik/$filename');
     List<dynamic> jsonData = jsonDecode(jsonString);
     return jsonData.cast<Map<String, dynamic>>();
   }

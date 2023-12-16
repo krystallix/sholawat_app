@@ -25,7 +25,7 @@ class _SulukTabState extends State<SulukTab> {
   Future<void> _loadJsonData() async {
     // Membaca file JSON dari assets
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/datas/datasuluk.json');
+        .loadString('assets/datas/data_suluk.json');
 
     // Mendekode JSON menjadi List<dynamic>
     List<dynamic> decodedData = json.decode(data);

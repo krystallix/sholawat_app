@@ -25,7 +25,7 @@ class _MaulidTabState extends State<MaulidTab> {
   Future<void> _loadJsonData() async {
     // Membaca file JSON dari assets
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/datas/datamaulid.json');
+        .loadString('assets/datas/data_maulid.json');
 
     // Mendekode JSON menjadi List<dynamic>
     List<dynamic> decodedData = json.decode(data);

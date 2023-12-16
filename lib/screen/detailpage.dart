@@ -68,7 +68,7 @@ class _DetailPageState extends State<DetailPage> {
         appBar: _appBar(context: context),
         body: FutureBuilder(
           future: DefaultAssetBundle.of(context)
-              .loadString('assets/datas/$formattedTitle.json'),
+              .loadString('assets/datas/lirik/$formattedTitle.json'),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               final jsonData = json.decode(snapshot.data.toString());
